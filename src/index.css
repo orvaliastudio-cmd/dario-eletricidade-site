@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-condensed: "Barlow Condensed", sans-serif;
+
+  --color-azul: #0b2545;
+  --color-azul2: #0d1b2a;
+  --color-azul3: #122d56;
+  --color-laranja: #f5a623;
+  --color-laranja2: #e8930e;
+  --color-cinza: #8da9c4;
+  --color-texto: #d0e4f5;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-azul2 text-white font-sans overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .circuit-bg-svg {
+    @apply absolute inset-0 overflow-hidden pointer-events-none z-0;
+  }
+  .circuit-bg-svg svg {
+    @apply w-full h-full opacity-8;
+  }
+}
